@@ -6,8 +6,19 @@ numLives = 10  # number of player's lives remaining
 mNumLives = 12  # number of monster's lives remaining
 
 diceOptions = [1, 2, 3, 4, 5, 6]
-combatStrength = int(input("Enter your combat Strength: "))
-mCombatStrength = int(input("Enter the monster's combat Strength: "))
+
+
+# Function to get valid integer input
+def get_int_input(prompt):
+    while True:
+        try:
+            return int(input(prompt))
+        except ValueError:
+            print("Error: Please enter a valid integer.")
+
+
+combatStrength = get_int_input("Enter your combat Strength: ")
+mCombatStrength = get_int_input("Enter the monster's combat Strength: ")
 
 input("Roll the dice for your health points (Press enter)")
 healthPoints = random.choice(diceOptions)
