@@ -8,7 +8,7 @@ mNumLives = 12  # number of monster's lives remaining
 diceOptions = [1, 2, 3, 4, 5, 6]
 
 
-# Function to get valid integer input
+# get valid integer input
 def get_int_input(prompt):
     while True:
         try:
